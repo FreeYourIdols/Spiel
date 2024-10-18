@@ -1,10 +1,10 @@
-function checkAnswer2(correctAnswer,nextpage,downpage) {
+function checkAnswer2(correctAnswer,nextpage) {
     
     const userAnswer = document.getElementById('answer').value;
     if (userAnswer.toLowerCase() == correctAnswer.toLowerCase()) 
         {   
         saveScore(10);
-        window.open(downpage, '_blank');
+  
         window.location.href = nextpage;
         } 
     else {

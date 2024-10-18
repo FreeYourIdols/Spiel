@@ -6,7 +6,7 @@ function downloadImage(imageUrl) {
     a.click();
     document.body.removeChild(a);
 }
-function checkAnswers(minimumCorrect,nextpage,pagedown) {
+function checkAnswers(minimumCorrect,nextpage) {
     const correctAnswers = document.getElementById('answers').value;
     const message = document.getElementById('message');
   
@@ -14,7 +14,7 @@ function checkAnswers(minimumCorrect,nextpage,pagedown) {
     if (correctAnswers >= minimumCorrect) {
         message.style.color = 'green';
         message.textContent = "Glückwunsch! Du bist zum nächsten Level gegangen.";
-        window.open(pagedown, '_blank');
+       
         saveScore(10);
         window.location.href = nextpage;
         
@@ -26,7 +26,7 @@ function checkAnswers(minimumCorrect,nextpage,pagedown) {
 function saveScore(score) {
     let totalScore = sessionStorage.getItem('totalScore');
     if (!totalScore) {
-        totalScore = 0;
+        totalScore = 100;
     }
     totalScore = parseInt(totalScore) + score;
     sessionStorage.setItem('totalScore', totalScore);
@@ -34,7 +34,7 @@ function saveScore(score) {
 }
 
 function startTimer(display) {
-    let timer = 0; // Start from 0
+    let timer = sessionStorage.getItem('timer') ? parseInt(sessionStorage.getItem('timer')) : 0; // Start from saved time or 0
     let minutes, seconds;
 
     const interval = setInterval(function () {
@@ -49,7 +49,7 @@ function startTimer(display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        // Save the elapsed time in sessionStorage if needed
+        // Save the elapsed time in sessionStorage
         sessionStorage.setItem('timer', timer);
     }, 1000);
 }
@@ -62,10 +62,10 @@ window.onload = function () {
     document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     const timerDisplay = document.getElementById('timer');
 
-    // Start the timer from 0
+    // Start the timer
     startTimer(timerDisplay);
 };
-function checkAnswer(isCorrect,nextpage,pagedown) {
+function checkAnswer(isCorrect,nextpage) {
     const message = document.getElementById('message');
     if (isCorrect) {
         setTimeout(function() {
@@ -74,7 +74,7 @@ function checkAnswer(isCorrect,nextpage,pagedown) {
            
         }, 10000);
         
-        window.open(pagedown, '_blank');
+    
         saveScore(10);
         window.location.href = nextpage;
         
