@@ -33,16 +33,14 @@ function saveScore(score) {
     
 }
 
-function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
-
-    // Verifică dacă există un timer salvat în sessionStorage
-    const savedTime = sessionStorage.getItem('timer');
-    if (savedTime) {
-        timer = parseInt(savedTime, 10);
-    }
+function startTimer(display) {
+    let timer = 0; // Start from 0
+    let minutes, seconds;
 
     const interval = setInterval(function () {
+        // Increment the timer every second
+        timer++;
+
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -51,13 +49,8 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        // Salvează timpul rămas în sessionStorage
+        // Save the elapsed time in sessionStorage if needed
         sessionStorage.setItem('timer', timer);
-
-        if (--timer < 0) {
-            clearInterval(interval); // Oprește timer-ul când ajunge la 0
-            sessionStorage.removeItem('timer'); // Șterge timer-ul din sessionStorage la final
-        }
     }, 1000);
 }
 
@@ -68,11 +61,9 @@ window.onload = function () {
     }
     document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     const timerDisplay = document.getElementById('timer');
-    const timeInMinutes = 5;  // Setează numărul de minute pentru timer
-    const timeInSeconds = timeInMinutes * 60;
 
-    // Pornește timer-ul folosind timpul rămas din sessionStorage sau timpul inițial
-    startTimer(timeInSeconds, timerDisplay);
+    // Start the timer from 0
+    startTimer(timerDisplay);
 };
 function checkAnswer(isCorrect,nextpage,pagedown) {
     const message = document.getElementById('message');
