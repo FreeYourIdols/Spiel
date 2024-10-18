@@ -57,7 +57,7 @@ function startTimer(display) {
 window.onload = function () {
     let totalScore = sessionStorage.getItem('totalScore');
     if (!totalScore) {
-        totalScore = 0;
+        totalScore = 100;
     }
     document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     const timerDisplay = document.getElementById('timer');
