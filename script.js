@@ -37,7 +37,7 @@ function startTimer(display) {
     let timer = sessionStorage.getItem('timer') ? parseInt(sessionStorage.getItem('timer')) : 0; // Start from saved time or 0
     let minutes, seconds;
 
-    const interval = setInterval(function () {
+    interval=setInterval(function () {
         // Increment the timer every second
         timer++;
 
@@ -83,4 +83,7 @@ function checkAnswer(isCorrect,nextpage) {
         message.style.color = "red";
     }
 }
-
+function stopTimer() {
+    clearInterval(interval); // Oprește intervalul
+    alert("Die Zeit ist stehen geblieben");
+}
