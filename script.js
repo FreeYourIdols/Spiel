@@ -13,13 +13,13 @@ function checkAnswers(minimumCorrect,nextpage) {
 
     if (correctAnswers >= minimumCorrect) {
         message.style.color = 'green';
-        message.textContent = "Glückwunsch! Du bist zum nächsten Level gegangen.";
+        message.textContent = "Glückwunsch! Du bist im nächsten Level.";
        
         saveScore(10);
         window.location.href = nextpage;
         
     } else {
-        alert('Sie haben nicht alle Fragen richtig beantwortet. Versuchen Sie es erneut!');
+        alert('Du hast nicht alle Fragen richtig beantwortet. Versuche es noch einmal!');
         
     }
 }
