@@ -8,7 +8,7 @@ function checkAnswer2(correctAnswer,nextpage) {
         window.location.href = nextpage;
         } 
     else {
-        alert('Falsche Antwort! Versuchen Sie es erneut!');
+        alert('Falsche Antwort! Versuche es noch einmal!');
     }
 }
 function saveScore(score) {
