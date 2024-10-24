@@ -1,7 +1,7 @@
 function downloadImage(imageUrl) {
     const a = document.createElement('a');
     a.href = imageUrl;
-    a.download = 'spike.png'; // Numele fișierului care va fi descărcat
+    a.download = 'spike.png'; // Name der Datei
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
