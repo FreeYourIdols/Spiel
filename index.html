@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +14,109 @@
             background-repeat: no-repeat; /* Avoid repeating the image */
             background-position: center center; /* Center the image */
             background-attachment: fixed; /* Keep the image fixed during scrolling */
+            color: #fff; /* Default text color for readability */
+            font-family: Arial, sans-serif;
+        }
+
+        .title-logo {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+            color: #fff; /* White text color */
+            padding: 20px 40px; /* Add padding for a "badge" effect */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            font-family: 'Impact', Arial, sans-serif; /* Bold, standout font style */
+            text-transform: uppercase; /* Make text uppercase for logo-like appearance */
+            letter-spacing: 3px; /* Add spacing between letters */
+            font-size: 3rem; /* Increase font size */
+        }
+
+        .btn-custom {
+            background-color: #343a40;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #23272b;
+        }
+
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.9); /* Brighter semi-transparent modal */
+            color: #000; /* Dark text for contrast */
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
         }
     </style>
-    
 </head>
 <body>
-    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+        <h1 class="title-logo">Free Your Idol!</h1>
+        <!-- Button to Open First Modal -->
+        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#firstModal">
+            Willst du spielen?
+        </button>
+    </div>
 
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Free your idol!</h5>
-            <p class="card-text">Wir sind im Jahr 2093.<br />
-            Alle Games, die du bis jetzt gespielt hast, sind verschwunden!<br />
-            Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!<br />
-            Befreie deine Gaminghelden!<br />
-            <strong>Klamix</strong>, dein virtueller Freund, hilft dir dabei!</p>
-            <button type="button" class="btn btn-dark btn-lg" onclick="nextpage()">Los geht's!</button>
-          </div>
+    <!-- First Modal -->
+    <div class="modal fade" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="firstModalLabel">Free your idol!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Wir sind im Jahr 2093.<br />
+                    Alle Games, die du bis jetzt gespielt hast, sind verschwunden!<br />
+                    Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!<br />
+                    Befreie deine Gaminghelden!<br />
+                    <strong>Klamix</strong>, dein virtueller Freund, hilft dir dabei!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-target="#secondModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        Los geht's!
+                    </button>
+                </div>
+            </div>
         </div>
+    </div>
 
-        
-        
+    <!-- Second Modal -->
+    <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="secondModalLabel">Bist du bereit?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Die Reise beginnt hier!<br />
+                    Wähle deine nächste Aktion und stelle dich der Herausforderung!<br />
+                    <strong>Bereit für das Abenteuer?</strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="nextpage()">Zum Start</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function nextpage() {
-            window.location.href = "Startseite.html";
+            window.location.href = "Nivel1.html";
         }
     </script>
 </body>
