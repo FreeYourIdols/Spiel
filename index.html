@@ -30,24 +30,17 @@
             font-size: 3rem; /* Increase font size */
         }
 
-        .btn-custom {
-            background-color: #343a40;
-            color: #fff;
+        .modal-content {
+            background-color: rgba(30, 30, 30, 0.95); /* Soft dark background */
+            color: #f8f9fa; /* Light text for readability */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Add slight rounding for a modern look */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        .btn-warning {
             font-size: 18px;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-
-        .btn-custom:hover {
-            background-color: #23272b;
-        }
-
-        .modal-content {
-            background-color: rgba(255, 255, 255, 0.9); /* Brighter semi-transparent modal */
-            color: #000; /* Dark text for contrast */
-            border: none;
         }
 
         .btn-primary {
@@ -63,7 +56,7 @@
     <div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
         <h1 class="title-logo">Free Your Idol!</h1>
         <!-- Button to Open First Modal -->
-        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#firstModal">
+        <button type="button" class="btn btn-warning btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#firstModal">
             Willst du spielen?
         </button>
     </div>
@@ -74,7 +67,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="firstModalLabel">Free your idol!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Wir sind im Jahr 2093.<br />
@@ -98,7 +91,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="secondModalLabel">Bist du bereit?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Die Reise beginnt hier!<br />
