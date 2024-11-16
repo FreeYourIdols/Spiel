@@ -19,15 +19,29 @@
         }
 
         .title-logo {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for contrast */
             color: #fff; /* White text color */
-            padding: 20px 40px; /* Add padding for a "badge" effect */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            padding: 30px 50px; /* Add padding for a "badge" effect */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Shadow effect */
             font-family: 'Impact', Arial, sans-serif; /* Bold, standout font style */
             text-transform: uppercase; /* Make text uppercase for logo-like appearance */
-            letter-spacing: 3px; /* Add spacing between letters */
-            font-size: 3rem; /* Increase font size */
+            letter-spacing: 4px; /* Add spacing between letters */
+            font-size: 4rem; /* Increased font size */
+        }
+
+        .btn-custom {
+            background-color: #343a40; /* Darker background */
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #23272b;
         }
 
         .modal-content {
@@ -36,11 +50,6 @@
             border: none; /* Remove border */
             border-radius: 10px; /* Add slight rounding for a modern look */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-        }
-
-        .btn-warning {
-            font-size: 18px;
-            padding: 10px 20px;
         }
 
         .btn-primary {
@@ -56,7 +65,7 @@
     <div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
         <h1 class="title-logo">Free Your Idol!</h1>
         <!-- Button to Open First Modal -->
-        <button type="button" class="btn btn-warning btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#firstModal">
+        <button type="button" class="btn btn-custom btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#firstModal">
             Willst du spielen?
         </button>
     </div>
