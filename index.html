@@ -22,21 +22,6 @@
             padding: 0; /* Remove default padding */
             text-align: center; /* Center text */
         }
-
-        .btn-custom {
-            padding: 10px 20px; /* Add padding inside the button */
-            background-color: #d2691e; /* Chocolate color */
-            color: white; /* White text color */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            font-size: 16px; /* Standard button font size */
-            transition: background-color 0.3s ease; /* Smooth hover transition */
-        }
-
-        .btn-custom:hover {
-            background-color: #8b4513; /* Darker chocolate on hover */
-        }
     </style>
 </head>
 <body>
@@ -49,8 +34,7 @@
             Befreie deine Gaminghelden!<br />
             <strong>Klamix</strong>, dein virtueller Freund, hilft dir dabei!
         </p>
-
-        <button class="btn btn-custom mt-4" onclick="nextpage()">Los geht's!</button>
+        <button type="button" class="btn btn-dark" onclick="nextpage()">Los geht's!</button>
     </div>
 
     <!-- Bootstrap 5.3 JS Bundle -->
