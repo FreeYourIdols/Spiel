@@ -1,110 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Your Idol</title>
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            background-image: url('Fundal1.jpg');
-            background-size: cover; /* Cover the entire page */
-            background-repeat: no-repeat; /* Avoid repeating the image */
-            background-position: center center; /* Center the image */
-            background-attachment: fixed; /* Keep the image fixed during scrolling */
-            color: #fff; /* Default text color for readability */
-            font-family: Arial, sans-serif;
-        }
-
-        .btn-custom {
-            background-color: #343a40;
-            color: #fff;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .btn-custom:hover {
-            background-color: #23272b;
-        }
-
-        .modal-content {
-            background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent modal */
-            color: #fff;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="pagina1.css">
+    </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <h1 class="display-1">Free your idol!</h1>
-        <!-- Button to Open First Modal -->
-        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#firstModal">
-            Willst du spielen?
-        </button>
-    </div>
+    <h1>Free your idol!</h1>
+    <h1>  </h1>
+    <p> <span class="highlight">
+        <br>
+        <br>
+        <br
+        <br>
+        Wir sind im Jahr 2093.
+        Alle Games, die du bis jetzt gespielt hast, sind verschwunden!
+        Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!
+        Befreie deine Gaminghelden!
+        Klamix, dein virtueller Freund hilft dir dabei!
 
-    <!-- First Modal -->
-    <div class="modal fade" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="firstModalLabel">Free your idol!</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Wir sind im Jahr 2093.<br />
-                    Alle Games, die du bis jetzt gespielt hast, sind verschwunden!<br />
-                    Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!<br />
-                    Befreie deine Gaminghelden!<br />
-                    <strong>Klamix</strong>, dein virtueller Freund, hilft dir dabei!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-target="#secondModal" data-bs-toggle="modal" data-bs-dismiss="modal">
-                        Los geht's!
-                    </button>
-                </div>
-            </div>
+    </span>
+    <div class="nextpage">
+        <button onclick="nextpage()">Los gehts!</button>
+        <div class="message" id="message"></div>
         </div>
-    </div>
 
-    <!-- Second Modal -->
-    <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="secondModalLabel">Bist du bereit?</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Die Reise beginnt hier!<br />
-                    Wähle deine nächste Aktion und stelle dich der Herausforderung!<br />
-                    <strong>Bereit für das Abenteuer?</strong>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" onclick="nextpage()">Zum Start</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function nextpage() {
-            window.location.href = "Nivel1.html";
+        function nextpage(){
+            window.location.href = "Startseite.html";
         }
     </script>
+
 </body>
 </html>
