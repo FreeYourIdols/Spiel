@@ -6,6 +6,18 @@ function downloadImage(imageUrl) {
     a.click();
     document.body.removeChild(a);
 }
+function KlamixButton()
+{
+    Klamix(-10);
+    showImage();
+ 
+ 
+f
+}
+function Klamix(score)
+    {   const sc=score;
+        saveScore(sc);
+    }
 function checkAnswers(minimumCorrect,nextpage) {
     const correctAnswers = document.getElementById('answers').value;
     const message = document.getElementById('message');
@@ -30,6 +42,7 @@ function saveScore(score) {
     }
     totalScore = parseInt(totalScore) + score;
     sessionStorage.setItem('totalScore', totalScore);
+    document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     
 }
 
@@ -86,4 +99,10 @@ function checkAnswer(isCorrect,nextpage) {
 function stopTimer() {
     clearInterval(interval); // Oprește intervalul
     alert("Die Zeit ist stehen geblieben");
+}
+function showImage() {
+    // Obține elementul imagine
+    var img = document.getElementById("newImage");
+    // Schimbă stilul pentru a-l face vizibil
+    img.style.display = "block"; // Schimbă display-ul la "block" pentru a-l face vizibil
 }

@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the real story</title>
     <link rel="stylesheet" href="Nivel4.css">
+    <style>
+        /* Stil pentru butonul din colțul din dreapta sus */
+        .top-right-button {
+            position: absolute;
+            top: 20px; /* Ajustează distanța de sus */
+            right: 20px; /* Ajustează distanța de dreapta */
+            background-color: transparent; /* Fără fundal */
+            border: none; /* Fără bordură */
+            cursor: pointer; /* Cursor de pointer la hover */
+        }
+
+        .top-right-button img {
+            width: 40px; /* Ajustează dimensiunea imaginii */
+            height: auto; /* Păstrează proporțiile imaginii */
+        }
+        .newImage {
+            display: none; /* Ascunde imaginea inițial */
+            position: absolute;
+            top: 200px; /* Ajustează distanța de sus */
+            right: 20px; /* Ajustează distanța de dreapta */
+            margin-top: 30px; /* Adaugă un spațiu deasupra imaginii */
+            width: 300px; /* Ajustează lățimea imaginii */
+            height: auto; /* Păstrează proporțiile imaginii */
+        }
+    </style>
 </head>
 <body>
     <div id="timer"></div>
     <h1>Nirwana 4: Finde die echte Nachricht</h1>
+    <!-- Butonul cu imaginea Klamix.png -->
+    <button class="top-right-button" onclick="KlamixButton()">
+        <img src="Klamix.png" alt="Klamix Icon">
+    </button>
+    <div class="newImage" id="newImage">
+            
+            <img src="Klamixcheck.jpg" alt="KlamixCheck" >   
+        </div>
     <p>Drei News über Paluten, welche ist die echte Nachricht?:</p>
 
     <div class="news-container">
@@ -57,8 +90,8 @@
     </div>
 
     <div id="message"></div>
-    <script src="script.js"></script>
-      
+  
+    <script src="script.js"></script>      
     
    
 </body>
