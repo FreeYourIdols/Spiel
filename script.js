@@ -8,15 +8,15 @@ function downloadImage(imageUrl) {
 }
 function KlamixButton()
 {
-    Klamix(-10);
+    Klamix(-9);
     showImage();
  
  
 f
 }
 function Klamix(score)
-    {   const sc=score;
-        saveScore(sc);
+    {   
+        saveScore(score);
     }
 function checkAnswers(minimumCorrect,nextpage) {
     const correctAnswers = document.getElementById('answers').value;
@@ -27,7 +27,7 @@ function checkAnswers(minimumCorrect,nextpage) {
         message.style.color = 'green';
         message.textContent = "Glückwunsch! Du bist im nächsten Level.";
        
-        saveScore(10);
+        saveScore(1);
         window.location.href = nextpage;
         
     } else {
@@ -40,7 +40,7 @@ function saveScore(score) {
     if (!totalScore) {
         totalScore = 100;
     }
-    totalScore = parseInt(totalScore) + score;
+    totalScore = parseInt(totalScore) + (score - 1);
     sessionStorage.setItem('totalScore', totalScore);
     document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     
@@ -88,7 +88,7 @@ function checkAnswer(isCorrect,nextpage) {
         }, 10000);
         
     
-        saveScore(10);
+        saveScore(1);
         window.location.href = nextpage;
         
     } else {
@@ -105,4 +105,17 @@ function showImage() {
     var img = document.getElementById("newImage");
     // Schimbă stilul pentru a-l face vizibil
     img.style.display = "block"; // Schimbă display-ul la "block" pentru a-l face vizibil
+}
+function checkAnswer2(correctAnswer,nextpage) {
+    
+    const userAnswer = document.getElementById('answer').value;
+    if (userAnswer.toLowerCase() == correctAnswer.toLowerCase()) 
+        {   
+        saveScore(1);
+  
+        window.location.href = nextpage;
+        } 
+    else {
+        alert('Falsche Antwort! Versuche es noch einmal!');
+    }
 }
