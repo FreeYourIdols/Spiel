@@ -18,6 +18,7 @@ function saveScore(score) {
     }
     totalScore = parseInt(totalScore) + score;
     sessionStorage.setItem('totalScore', totalScore);
+    document.getElementById('message').textContent = "Die Gesamtpunktzahl: " + totalScore;
     
 }
 

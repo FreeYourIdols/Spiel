@@ -12,8 +12,9 @@ body {
 }
 
 p {
-    color: #000000; /* Culoare maro pentru tematica de deșert */
-    font-size: 20px;
+    color: rgb(0,0,0); /* Culoare maro pentru tematica de deșert */
+    font-size: 25px;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 

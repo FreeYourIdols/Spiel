@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
-        <link rel="stylesheet" href="pagina1.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Your Idol</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('Fundal1.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* Avoid repeating the image */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed during scrolling */
+            color: #fff; /* Default text color for readability */
+            font-family: Arial, sans-serif;
+        }
+
+        .title-logo {
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for contrast */
+            color: #fff; /* White text color */
+            padding: 30px 50px; /* Add padding for a "badge" effect */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Shadow effect */
+            font-family: 'Impact', Arial, sans-serif; /* Bold, standout font style */
+            text-transform: uppercase; /* Make text uppercase for logo-like appearance */
+            letter-spacing: 4px; /* Add spacing between letters */
+            font-size: 4rem; /* Increased font size */
+        }
+
+        .btn-custom {
+            background-color: var(--bs-primary); /* Bootstrap primary color */
+            color: #fff; /* White text */
+            font-size: 22px; /* Large font size */
+            padding: 15px 30px; /* Larger padding for prominence */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Slightly rounded corners */
+            margin-top: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3; /* Darker primary shade */
+        }
+
+        .modal-content {
+            background-color: rgba(30, 30, 30, 0.95); /* Soft dark background */
+            color: #f8f9fa; /* Light text for readability */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Add slight rounding for a modern look */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+    </style>
+</head>
 <body>
-    <h1>Free your idol!</h1>
-    <h1>  </h1>
-    <p> <span class="highlight">
-        <br>
-        <br>
-        <br
-        <br>
-        Wir sind im Jahr 2093.
-        Alle Games, die du bis jetzt gespielt hast, sind verschwunden!
-        Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!
-        Befreie deine Gaminghelden!
-        Klamix, dein virtueller Freund hilft dir dabei!
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+        <h1 class="title-logo">Free Your Idol!</h1>
+        <!-- Button to Open First Modal -->
+        <button type="button" class="btn btn-custom btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#firstModal">
+            Willst du spielen?
+        </button>
+    </div>
 
-    </span>
-    <div class="nextpage">
-        <button onclick="nextpage()">Los gehts!</button>
-        <div class="message" id="message"></div>
+    <!-- First Modal -->
+    <div class="modal fade" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="firstModalLabel">Free your idol!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Wir sind im Jahr 2093.<br />
+                    Alle Games, die du bis jetzt gespielt hast, sind verschwunden!<br />
+                    Alle deine Gaminghelden sind im virtuellen Nirwana gefangen!<br />
+                    Befreie deine Gaminghelden!<br />
+                    <strong>Klamix</strong>, dein virtueller Freund, hilft dir dabei!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-target="#secondModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        Los geht's!
+                    </button>
+                </div>
+            </div>
         </div>
+    </div>
 
+    <!-- Second Modal -->
+    <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="secondModalLabel">Bist du bereit? Bevor du loslegst hier noch einige Hinweise!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Nach jedem gelösten “Nirvana” bekommst du ein Foto von deinem geretteten Helden. Das Foto sollst du auf OneNote in deinem Teamordner speichern. Du brauchst die Fotos am Ende des Spiels für die letzte Aufgabe. Wenn du Hilfe benötigst, frage deinen Kollegen <strong>Klamix</strong>, indem du auf den Button unten rechts im Bild klickst. Aber Achtung, wenn du diese Hilfe in Anspruch nimmst, werden dir jedes Mal 10 Lifepoints abgezogen.
+                    <br />
+                    <strong>Bereit für das Abenteuer?</strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="nextpage()">Zum Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function nextpage(){
-            window.location.href = "Startseite.html";
+        function nextpage() {
+            window.location.href = "Nivel1.html";
         }
     </script>
-
 </body>
 </html>
