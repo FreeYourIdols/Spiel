@@ -5,9 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="Nivel5.css">
+    <style>
+        /* Stil pentru butonul din colțul din dreapta sus */
+        .top-right-button {
+            position: absolute;
+            top: 10px; /* Ajustează distanța de sus */
+            right: 10px; /* Ajustează distanța de dreapta */
+            background-color: transparent; /* Fără fundal */
+            border: none; /* Fără bordură */
+            cursor: pointer; /* Cursor de pointer la hover */
+        }
+
+        .top-right-button img {
+            width: 100px; /* Ajustează dimensiunea imaginii */
+            height: auto; /* Păstrează proporțiile imaginii */
+        }
+        .newImage {
+            display: none; /* Ascunde imaginea inițial */
+            
+            top: 200px; /* Ajustează distanța de sus */
+            right: 300px; /* Ajustează distanța de dreapta */
+            margin-top: 30px; /* Adaugă un spațiu deasupra imaginii */
+            /
+        }
+    </style>
    
 </head>
 <body>
+    <!-- Butonul cu imaginea Klamix.png -->
+    <button class="top-right-button" onclick="KlamixButton()">
+        <img src="Klamix.png" alt="Klamix Icon">
+    </button>
+    <div class="newImage" id="newImage">
+            
+            <img src="KlamixCheck5.jpg" 200x150 alt="KlamixCheck" >   
+        </div>
     <div id="timer"></div>
     <h1>Rette Mario!</h1>
 
