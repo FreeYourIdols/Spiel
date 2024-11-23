@@ -119,3 +119,5 @@ function checkAnswer2(correctAnswer,nextpage) {
         alert('Falsche Antwort! Versuche es noch einmal!');
     }
 }
+
+  

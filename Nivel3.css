@@ -49,4 +49,29 @@ input[type="text"] {
     border-radius: 5px;
     font-family: Arial, sans-serif;
   }
-  
+  .message {
+    margin-top: 10px;
+    font-size: 16px;
+    position: absolute;
+  top: 80px;
+  left: 10px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+h1 {
+    color: #000000; /* Culoare maro pentru tematica de deșert */
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+p {
+    color: rgb(0,0,0); /* Culoare maro pentru tematica de deșert */
+    background-color: hsla(0, 0%, 100%, 0.5);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top:70px;
+}
